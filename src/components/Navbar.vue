@@ -15,6 +15,10 @@
         style="margin-left: 15px"
         @click="$router.push('/store')">Store
       </my-button-vue>
+      <my-button-vue
+        style="margin-left: 15px"
+        @click="$router.push('/composition')">Composition Api
+      </my-button-vue>
     </div>
   </div>
 </template>
