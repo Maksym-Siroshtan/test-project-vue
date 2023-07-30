@@ -7,6 +7,7 @@
     </div>
     <div class="post__btns">
       <my-button-vue
+        style="margin-right: 15px"
         @click="$router.push(`/posts/${post.id}`)"
       >
         Открыть
