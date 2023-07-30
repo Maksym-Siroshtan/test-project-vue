@@ -28,6 +28,8 @@
     />
     <div v-else>Идет загрузка...</div>
     <div v-intersection="loadMorePosts" class="observer"></div>
+
+    <!-- Реализация пагинации -->
     <!-- <div class="page__wrapper">
       <div
         class="page"
@@ -117,20 +119,22 @@ methods: {
         console.error(error);
       }
     },
-/*     changePage(pageNumber) {
+    //Реализация пагинации
+    /*changePage(pageNumber) {
       this.page = pageNumber;
     } */
   },
 
   watch: {
-/*     page() {
+    //Реализация пагинации
+    /*page() {
       this.fetchPosts();
     } */
   },
 
   mounted() {
     this.fetchPosts();
-
+    //Реализация дозагрузки постов при прокрутке до низа страницы
     /* const options = {
       rootMargin: '0px',
       threshold: 1.0
@@ -168,6 +172,6 @@ methods: {
   padding: 10px;
 }
 .current-page {
-   border: 2px solid teal;
+  border: 2px solid teal;
 }
 </style>
