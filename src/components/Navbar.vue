@@ -1,24 +1,37 @@
 <template>
   <div class="navbar">
-    <div @click="$router.push('/')">Vue 3</div>
+    <div
+      class="navbar__logo"
+      @click="$router.push('/')"
+    >
+      Vue 3
+    </div>
     <div class="navbar__btns">
+
       <my-button-vue
         @click="$router.push('/posts')"
       >
         Посты
       </my-button-vue>
+
       <my-button-vue
         style="margin-left: 15px"
-        @click="$router.push('/about')">О приложении
+        @click="$router.push('/store')">
+          Store
       </my-button-vue>
+
       <my-button-vue
         style="margin-left: 15px"
-        @click="$router.push('/store')">Store
+        @click="$router.push('/composition')">
+          Composition Api
       </my-button-vue>
+
       <my-button-vue
         style="margin-left: 15px"
-        @click="$router.push('/composition')">Composition Api
+        @click="$router.push('/about')">
+          О приложении
       </my-button-vue>
+
     </div>
   </div>
 </template>
@@ -36,6 +49,11 @@
   display: flex;
   align-items: center;
   padding: 0 15px;
+}
+.navbar__logo {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
 }
 .navbar__btns {
   margin-left: auto;
